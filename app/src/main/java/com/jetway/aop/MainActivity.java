@@ -1,5 +1,6 @@
 package com.jetway.aop;
 
+import android.Manifest;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         // Log.i(TAG,"消耗时间：  "+(System.currentTimeMillis()-beagin)+"ms");
     }
 
+    @permissionCheck(value = Manifest.permission.CAMERA)
     @CheckNet
     public void btn_net(View view) {
         Log.i(TAG, "  热   我们去18");
